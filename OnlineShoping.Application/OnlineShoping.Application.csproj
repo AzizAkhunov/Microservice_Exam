@@ -20,4 +20,18 @@
     <ProjectReference Include="..\OnlineShoping.Domain\OnlineShoping.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\Users\" />
+    <Folder Include="UseCases\Products\" />
+    <Folder Include="UseCases\Addresses\" />
+    <Folder Include="UseCases\Cards\" />
+    <Folder Include="UseCases\Carts\" />
+    <Folder Include="UseCases\Categories\" />
+    <Folder Include="UseCases\Comments\" />
+    <Folder Include="UseCases\Companies\" />
+    <Folder Include="UseCases\Discounts\" />
+    <Folder Include="UseCases\Orders\" />
+    <Folder Include="UseCases\Prices\" />
+  </ItemGroup>
+
 </Project>
