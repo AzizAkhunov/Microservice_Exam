@@ -15,7 +15,6 @@ namespace OnlineShoping.Application.Absreactions
         public DbSet<Company> Companies { get; set; }
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderList> OrderLists { get; set; }
         public DbSet<Price> Prices { get; set; }
 
 

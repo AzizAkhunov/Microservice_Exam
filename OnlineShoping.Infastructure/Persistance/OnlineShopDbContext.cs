@@ -19,7 +19,6 @@ namespace OnlineShoping.Infastructure.Persistance
         public DbSet<Company> Companies { get; set; }
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderList> OrderLists { get; set; }
         public DbSet<Price> Prices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -36,7 +35,29 @@ namespace OnlineShoping.Infastructure.Persistance
                 .HasForeignKey(e => e.CompanyId)
                 .IsRequired();
 
+            modelBuilder.Entity<Product>()
+                .HasOne(e => e.Discount)
+                .WithOne(e => e.Product)
+                .HasForeignKey<Discount>(e => e.ProductId)
+                .IsRequired();
 
+            modelBuilder.Entity<Category>()
+                .HasMany(e => e.Products)
+                .WithOne(e => e.Category)
+                .HasForeignKey(e => e.CategoryId)
+                .IsRequired();
+
+            modelBuilder.Entity<Product>()
+                .HasOne(e => e.Price)
+                .WithOne(e => e.Product)
+                .HasForeignKey<Price>(e => e.ProductId)
+                .IsRequired();
+
+            modelBuilder.Entity<Company>()
+                .HasOne(e => e.Address)
+                .WithOne(e => e.Company)
+                .HasForeignKey<Address>(e => e.CompanyId)
+                .IsRequired();
         }
     }
 }
