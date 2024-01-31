@@ -1,9 +1,8 @@
-﻿namespace OnlineShoping.Domain.Entities
+﻿namespace OnlineShoping.API.DTOs
 {
-    public class Discount : BaseModel
+    public class DiscountDTO
     {
         public int ProductId { get; set; }
-        public Product Product { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime? StartDate { get; set; }

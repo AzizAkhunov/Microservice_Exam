@@ -1,15 +1,11 @@
-﻿namespace OnlineShoping.Domain.Entities
+﻿namespace OnlineShoping.API.DTOs
 {
-    public class Product : BaseModel
+    public class ProductDTO
     {
         public string Name { get; set; }
         public string Description { get; set; }
         public int CompanyId { get; set; }
-        public Company Company { get; set; }
-        public Discount? Discount { get; set; }
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
-        public Price? Price { get; set; }
         public int Count { get; set; }
         public string ImgPath { get; set; }
     }
