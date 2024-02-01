@@ -25,9 +25,6 @@
     <Folder Include="UseCases\Carts\" />
     <Folder Include="UseCases\Categories\" />
     <Folder Include="UseCases\Comments\" />
-    <Folder Include="UseCases\Companies\Commands\" />
-    <Folder Include="UseCases\Companies\Handlers\" />
-    <Folder Include="UseCases\Companies\Quarries\" />
     <Folder Include="UseCases\Discounts\" />
     <Folder Include="UseCases\Orders\" />
     <Folder Include="UseCases\Prices\" />
