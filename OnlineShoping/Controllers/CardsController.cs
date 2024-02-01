@@ -1,13 +1,9 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using OnlineShoping.API.DTOs;
-using OnlineShoping.Application.Absreactions;
 using OnlineShoping.Application.UseCases.Cards.Commands;
 using OnlineShoping.Application.UseCases.Cards.Quarries;
-using OnlineShoping.Application.UseCases.Users.Commands;
-using OnlineShoping.Application.UseCases.Users.Quarries;
 using OnlineShoping.Domain.Entities;
 
 namespace OnlineShoping.API.Controllers
