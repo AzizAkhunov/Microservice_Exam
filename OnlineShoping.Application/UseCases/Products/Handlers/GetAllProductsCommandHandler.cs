@@ -17,7 +17,7 @@ namespace OnlineShoping.Application.UseCases.Products.Handlers
         {
             try
             {
-                var res = await _context.Products.ToListAsync();
+                var res = await _context.Products.Include(x => x.Price).Include(x => x.Company).Include(x=>x.Category).ToListAsync();
                 return res;
             }
             catch (Exception ex) { return null; }

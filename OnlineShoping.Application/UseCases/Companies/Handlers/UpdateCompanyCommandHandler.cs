@@ -23,6 +23,7 @@ namespace OnlineShoping.Application.UseCases.Companies.Handlers
                 company.Name = request.Name;
                 company.Description = request.Description;
                 company.PhoneNumber = request.PhoneNumber;
+                company.UpdatedAt = DateTime.UtcNow;
 
                 _context.Companies.Update(company);
                 await _context.SaveChangesAsync(cancellationToken);

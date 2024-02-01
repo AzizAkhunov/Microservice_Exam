@@ -24,6 +24,7 @@ namespace OnlineShoping.Application.UseCases.Users.Handlers
                 user.LastName = request.LastName;
                 user.PhoneNumber = request.PhoneNumber;
                 user.Password = request.Password;
+                user.UpdatedAt = DateTime.UtcNow;
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync(cancellationToken);
                 return true;

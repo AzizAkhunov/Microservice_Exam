@@ -23,6 +23,8 @@ namespace OnlineShoping.Application.UseCases.Cards.Handlers
                 card.CardNumber = request.CardNumber;
                 card.Amount = request.Amount;
                 card.UserId = request.UserId;
+                card.UpdatedAt = DateTime.UtcNow;
+
                 _context.Cards.Update(card);
                 await _context.SaveChangesAsync(cancellationToken);
                 return true;

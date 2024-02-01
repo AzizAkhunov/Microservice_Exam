@@ -26,6 +26,7 @@ namespace OnlineShoping.Application.UseCases.Products.Handlers
                 product.CategoryId = request.CategoryId;
                 product.Count = request.Count;
                 product.ImgPath = request.ImgPath;
+                product.UpdatedAt = DateTime.UtcNow;
 
                 _context.Products.Update(product);
                 await _context.SaveChangesAsync(cancellationToken);

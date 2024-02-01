@@ -20,8 +20,4 @@
     <ProjectReference Include="..\OnlineShoping.Domain\OnlineShoping.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\Prices\" />
-  </ItemGroup>
-
 </Project>

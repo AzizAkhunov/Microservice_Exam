@@ -21,6 +21,7 @@ namespace OnlineShoping.Application.UseCases.Orders.Handlers
             if (order is not null)
             {
                 order.UserId  = request.UserId;
+                order.UpdatedAt = DateTime.UtcNow;
 
                 _context.Orders.Update(order);
                 await _context.SaveChangesAsync(cancellationToken);

@@ -23,6 +23,7 @@ namespace OnlineShoping.Application.UseCases.Addresses.Handlers
                 address.Country = request.Country;
                 address.City = request.City;
                 address.CompanyId = request.CompanyId;
+                address.UpdatedAt = DateTime.UtcNow;
 
                 _context.Addresses.Update(address);
                 await _context.SaveChangesAsync(cancellationToken);

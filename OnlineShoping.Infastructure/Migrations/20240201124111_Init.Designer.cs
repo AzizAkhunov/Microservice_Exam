@@ -12,7 +12,7 @@ using OnlineShoping.Infastructure.Persistance;
 namespace OnlineShoping.Infastructure.Migrations
 {
     [DbContext(typeof(OnlineShopDbContext))]
-    [Migration("20240131163219_Init")]
+    [Migration("20240201124111_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -144,39 +144,6 @@ namespace OnlineShoping.Infastructure.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("OnlineShoping.Domain.Entities.Comment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Comments");
-                });
-
             modelBuilder.Entity("OnlineShoping.Domain.Entities.Company", b =>
                 {
                     b.Property<int>("Id")
@@ -208,45 +175,6 @@ namespace OnlineShoping.Infastructure.Migrations
                     b.ToTable("Companies");
                 });
 
-            modelBuilder.Entity("OnlineShoping.Domain.Entities.Discount", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId")
-                        .IsUnique();
-
-                    b.ToTable("Discounts");
-                });
-
             modelBuilder.Entity("OnlineShoping.Domain.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -257,9 +185,6 @@ namespace OnlineShoping.Infastructure.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -422,36 +347,6 @@ namespace OnlineShoping.Infastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("OnlineShoping.Domain.Entities.Comment", b =>
-                {
-                    b.HasOne("OnlineShoping.Domain.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OnlineShoping.Domain.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("OnlineShoping.Domain.Entities.Discount", b =>
-                {
-                    b.HasOne("OnlineShoping.Domain.Entities.Product", "Product")
-                        .WithOne("Discount")
-                        .HasForeignKey("OnlineShoping.Domain.Entities.Discount", "ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("OnlineShoping.Domain.Entities.Order", b =>
                 {
                     b.HasOne("OnlineShoping.Domain.Entities.User", "User")
@@ -507,9 +402,6 @@ namespace OnlineShoping.Infastructure.Migrations
 
             modelBuilder.Entity("OnlineShoping.Domain.Entities.Product", b =>
                 {
-                    b.Navigation("Discount")
-                        .IsRequired();
-
                     b.Navigation("Price");
                 });
 

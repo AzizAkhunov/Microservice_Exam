@@ -21,6 +21,8 @@ namespace OnlineShoping.Application.UseCases.Carts.Handlers
                 cart.UserId = request.UserId;
                 cart.ProductId = request.ProductId;
                 cart.Active = request.Active;
+                cart.UpdatedAt = DateTime.UtcNow;
+
                 _context.Carts.Update(cart);
                 await _context.SaveChangesAsync(cancellationToken);
                 return true;

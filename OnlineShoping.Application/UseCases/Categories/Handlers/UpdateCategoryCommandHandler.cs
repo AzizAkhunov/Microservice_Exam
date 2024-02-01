@@ -21,6 +21,7 @@ namespace OnlineShoping.Application.UseCases.Categories.Handlers
             if (category is not null)
             {
                 category.Name = request.Name;
+                category.UpdatedAt = DateTime.UtcNow;
 
                 _context.Categories.Update(category);
                 await _context.SaveChangesAsync(cancellationToken);
