@@ -6,6 +6,6 @@
         public User User { get; set; }
         public int ProductId { get; set; }
         public Product Product { get; set; }
-        public bool Active { get; set; }
+        public bool Active { get; set; } = true;
     }
 }

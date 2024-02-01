@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="UseCases\Addresses\" />
-    <Folder Include="UseCases\Carts\" />
     <Folder Include="UseCases\Comments\" />
     <Folder Include="UseCases\Discounts\" />
     <Folder Include="UseCases\Orders\" />
