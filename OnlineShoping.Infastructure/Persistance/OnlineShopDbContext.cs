@@ -15,9 +15,7 @@ namespace OnlineShoping.Infastructure.Persistance
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Comment> Comments { get; set; }
         public DbSet<Company> Companies { get; set; }
-        public DbSet<Discount> Discounts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Price> Prices { get; set; }
 
@@ -33,12 +31,6 @@ namespace OnlineShoping.Infastructure.Persistance
                 .HasMany(e => e.Products)
                 .WithOne(e => e.Company)
                 .HasForeignKey(e => e.CompanyId)
-                .IsRequired();
-
-            modelBuilder.Entity<Product>()
-                .HasOne(e => e.Discount)
-                .WithOne(e => e.Product)
-                .HasForeignKey<Discount>(e => e.ProductId)
                 .IsRequired();
 
             modelBuilder.Entity<Category>()
