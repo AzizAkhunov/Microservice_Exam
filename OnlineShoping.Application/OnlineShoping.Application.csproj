@@ -21,10 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Users\" />
-    <Folder Include="UseCases\Products\" />
     <Folder Include="UseCases\Addresses\" />
-    <Folder Include="UseCases\Cards\" />
     <Folder Include="UseCases\Carts\" />
     <Folder Include="UseCases\Categories\" />
     <Folder Include="UseCases\Comments\" />
@@ -32,6 +29,9 @@
     <Folder Include="UseCases\Discounts\" />
     <Folder Include="UseCases\Orders\" />
     <Folder Include="UseCases\Prices\" />
+    <Folder Include="UseCases\Products\Handlers\" />
+    <Folder Include="UseCases\Products\Commands\" />
+    <Folder Include="UseCases\Products\Quarries\" />
   </ItemGroup>
 
 </Project>
