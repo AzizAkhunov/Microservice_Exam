@@ -16,4 +16,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\School.Application\School.Application.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace School.Domain.Entities
 {
-    public class Attendance
+    public class Attendance : BaseModel
     {
         public string Date { get; set; }
         public int StudentId { get; set; }

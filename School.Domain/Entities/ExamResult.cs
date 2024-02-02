@@ -1,6 +1,6 @@
 ﻿namespace School.Domain.Entities
 {
-    public class ExamResult
+    public class ExamResult : BaseModel
     {
         public int ExamId { get; set; }
         public Exam Exam { get; set; }
