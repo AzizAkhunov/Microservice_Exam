@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Parents\Handlers\" />
     <Folder Include="UseCases\Students\" />
     <Folder Include="UseCases\Courses\" />
     <Folder Include="UseCases\Grades\" />
