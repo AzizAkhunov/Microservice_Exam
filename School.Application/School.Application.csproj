@@ -21,10 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Students\" />
     <Folder Include="UseCases\Courses\" />
     <Folder Include="UseCases\Grades\" />
-    <Folder Include="UseCases\Classrooms\" />
     <Folder Include="UseCases\Attendances\" />
     <Folder Include="UseCases\Exams\" />
     <Folder Include="UseCases\ExamTypes\" />
