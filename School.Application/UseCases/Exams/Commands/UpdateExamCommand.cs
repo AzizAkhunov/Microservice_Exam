@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace School.Application.UseCases.Exams.Commands
 {
-    public class DeleteExamCommand : IRequest<bool>
+    public class UpdateExamCommand : IRequest<bool>
     {
         public int Id { get; set; }
+        public int ExamTypeId { get; set; }
+        public string Name { get; set; }
     }
 }

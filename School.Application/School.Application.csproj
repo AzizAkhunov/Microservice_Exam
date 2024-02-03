@@ -21,8 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Exams\Handlers\" />
-    <Folder Include="UseCases\Exams\Quarries\" />
     <Folder Include="UseCases\ExamTypes\" />
     <Folder Include="UseCases\ExamResults\" />
   </ItemGroup>
