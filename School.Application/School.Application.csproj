@@ -21,13 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Courses\" />
-    <Folder Include="UseCases\Grades\" />
-    <Folder Include="UseCases\Attendances\" />
-    <Folder Include="UseCases\Exams\" />
+    <Folder Include="UseCases\Exams\Handlers\" />
+    <Folder Include="UseCases\Exams\Quarries\" />
     <Folder Include="UseCases\ExamTypes\" />
     <Folder Include="UseCases\ExamResults\" />
-    <Folder Include="UseCases\Teachers\" />
   </ItemGroup>
 
 </Project>

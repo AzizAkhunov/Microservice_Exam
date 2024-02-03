@@ -253,7 +253,7 @@ namespace School.Infastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Grade");
+                    b.ToTable("Grades");
                 });
 
             modelBuilder.Entity("School.Domain.Entities.Parent", b =>

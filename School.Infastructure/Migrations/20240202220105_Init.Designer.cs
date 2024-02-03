@@ -12,7 +12,7 @@ using School.Infastructure.Persistance;
 namespace School.Infastructure.Migrations
 {
     [DbContext(typeof(SchoolDbContext))]
-    [Migration("20240202104921_Init")]
+    [Migration("20240202220105_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -256,7 +256,7 @@ namespace School.Infastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Grade");
+                    b.ToTable("Grades");
                 });
 
             modelBuilder.Entity("School.Domain.Entities.Parent", b =>

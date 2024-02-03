@@ -25,6 +25,7 @@ namespace School.Infastructure.Persistance
         public DbSet<Exam> Exams { get; set; }
         public DbSet<ExamType> ExamTypes { get; set; }
         public DbSet<ExamResult> ExamResults { get; set; }
+        public DbSet<Grade> Grades { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -28,7 +28,7 @@ namespace School.Infastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Grade",
+                name: "Grades",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -40,7 +40,7 @@ namespace School.Infastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Grade", x => x.Id);
+                    table.PrimaryKey("PK_Grades", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -119,9 +119,9 @@ namespace School.Infastructure.Migrations
                 {
                     table.PrimaryKey("PK_Courses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Courses_Grade_GradeId",
+                        name: "FK_Courses_Grades_GradeId",
                         column: x => x.GradeId,
-                        principalTable: "Grade",
+                        principalTable: "Grades",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -167,9 +167,9 @@ namespace School.Infastructure.Migrations
                 {
                     table.PrimaryKey("PK_Classrooms", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Classrooms_Grade_GradeId",
+                        name: "FK_Classrooms_Grades_GradeId",
                         column: x => x.GradeId,
-                        principalTable: "Grade",
+                        principalTable: "Grades",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -346,7 +346,7 @@ namespace School.Infastructure.Migrations
                 name: "Teachers");
 
             migrationBuilder.DropTable(
-                name: "Grade");
+                name: "Grades");
 
             migrationBuilder.DropTable(
                 name: "ExamTypes");
