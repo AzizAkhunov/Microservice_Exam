@@ -12,8 +12,8 @@ using OnlineShoping.Infastructure.Persistance;
 namespace OnlineShoping.Infastructure.Migrations
 {
     [DbContext(typeof(OnlineShopDbContext))]
-    [Migration("20240201124111_Init")]
-    partial class Init
+    [Migration("20240203103414_INit")]
+    partial class INit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

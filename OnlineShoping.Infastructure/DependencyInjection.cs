@@ -12,7 +12,7 @@ namespace OnlineShoping.Infastructure
         {
             services.AddDbContext<IOnlineShopDbContext, OnlineShopDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                options.UseSqlServer(configuration.GetConnectionString("Default"));
             });
 
             return services;

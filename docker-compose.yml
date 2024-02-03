@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=Numsey#2022
+      - ACCEPT_EULA=Y
+    volumes:
+      - c:\mssql:/var/opt/mssql/data
+    ports:
+      - "1450:1433"
+
+  gateaway:
+    image: ${DOCKER_REGISTRY-}gateaway
+    build:
+      context: .
+      dockerfile: GateAway/Dockerfile
+
+  onlineshoping.api:
+    image: ${DOCKER_REGISTRY-}onlineshopingapi
+    build:
+      context: .
+      dockerfile: OnlineShoping/Dockerfile
+
+
+  school.api:
+    image: ${DOCKER_REGISTRY-}schoolapi
+    build:
+      context: .
+      dockerfile: School.Api/Dockerfile
+
