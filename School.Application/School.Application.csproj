@@ -20,8 +20,4 @@
     <ProjectReference Include="..\School.Domain\School.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\ExamResults\" />
-  </ItemGroup>
-
 </Project>
