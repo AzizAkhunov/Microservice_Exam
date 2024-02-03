@@ -12,7 +12,8 @@ namespace School.Infastructure
         {
             services.AddDbContext<ISchoolDbContext, SchoolDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("Default"));
+                options.UseSqlServer(configuration.GetConnectionString("Default") , 
+                    providerOptions => providerOptions.EnableRetryOnFailure());
             });
 
             return services;
