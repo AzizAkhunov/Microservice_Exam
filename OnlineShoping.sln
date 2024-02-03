@@ -19,15 +19,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API_GateAway", "API_GateAwa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "School", "School", "{2B38FBE8-0E0B-4B5A-89B5-B0B5F31DD628}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GateAway", "GateAway\GateAway.csproj", "{4081DD5D-DBCA-4280-BB84-1D2EC1087567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GateAway", "GateAway\GateAway.csproj", "{4081DD5D-DBCA-4280-BB84-1D2EC1087567}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Api", "School.Api\School.Api.csproj", "{85397C8F-720C-4A7D-BF12-8DFACB6AB401}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Api", "School.Api\School.Api.csproj", "{85397C8F-720C-4A7D-BF12-8DFACB6AB401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Domain", "School.Domain\School.Domain.csproj", "{1E3007A3-C582-4807-9517-B591C2CF44C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Domain", "School.Domain\School.Domain.csproj", "{1E3007A3-C582-4807-9517-B591C2CF44C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Application", "School.Application\School.Application.csproj", "{74111F1C-85E6-4763-81E8-D20C0D490941}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Application", "School.Application\School.Application.csproj", "{74111F1C-85E6-4763-81E8-D20C0D490941}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Infastructure", "School.Infastructure\School.Infastructure.csproj", "{1586E576-ED51-430B-8AD3-A5A481DA3566}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Infastructure", "School.Infastructure\School.Infastructure.csproj", "{1586E576-ED51-430B-8AD3-A5A481DA3566}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
